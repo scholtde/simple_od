@@ -12,7 +12,7 @@ COLORS = np.random.uniform(0, 255, size=(len(CLASSES), 3))
 # load our serialized model from disk
 print("[INFO] loading model...")
 # net = cv2.dnn.readNetFromCaffe("models/MobileNetSSD_deploy.prototxt", "models/MobileNetSSD_deploy.caffemodel")
-net = cv2.dnn.readNetFromModelOptimizer("MobileNetSSD_deploy.xml", "MobileNetSSD_deploy.bin")
+net = cv2.dnn.readNetFromModelOptimizer("models/MobileNetSSD_deploy.xml", "models/MobileNetSSD_deploy.bin")
 net.setPreferableBackend(cv2.dnn.DNN_BACKEND_INFERENCE_ENGINE)
 net.setPreferableTarget(cv2.dnn.DNN_TARGET_MYRIAD)
 
