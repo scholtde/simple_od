@@ -1,6 +1,6 @@
 import numpy as np
-import cv2 as cv
-cap = cv.VideoCapture(1)
+import cv2
+cap = cv2.VideoCapture(1)
 if not cap.isOpened():
     print("Cannot open camera")
     exit()
@@ -14,9 +14,10 @@ while True:
         break
 
     # Display the resulting frame
-    cv.imshow('frame', frame)
-    if cv.waitKey(1) == ord('q'):
+    frame = cv2.resize(frame, 640, 360)
+    cv2.imshow('frame', frame)
+    if cv2.waitKey(1) == ord('q'):
         break
 # When everything done, release the capture
 cap.release()
-cv.destroyAllWindows()
+cv2.destroyAllWindows()
