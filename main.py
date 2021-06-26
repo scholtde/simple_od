@@ -14,7 +14,7 @@ while True:
         break
 
     # Display the resulting frame
-    frame = cv2.resize(frame, fx=640, fy=360)
+    frame = cv2.resize(frame, (640, 360))
     cv2.imshow('frame', frame)
     if cv2.waitKey(1) == ord('q'):
         break
